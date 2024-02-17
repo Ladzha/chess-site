@@ -11,11 +11,11 @@
   --red:#F54932;
    /*margin*/
   --margin-72: 72px;
-  --margin-20: 72px;
+  --margin-20: 20px;
 
   /* font-size */
   --main-title: 60px; /* 36 */
-  --big-title: 54px; /* 36 */
+  --big-title: clamp(36px, 50vw, 54px;) /* 36 */
   --small-title: 36px; /* 28 */
   /* line-height */
   --line-height-110: 110%; 
@@ -38,7 +38,8 @@
   --font-weight-600: 600;
   --font-weight-700: 700;
 
-  --header-height: 60px; 
+  --header-height-des: 60px; 
+  --header-height-mob: 47px; 
 }
 
 
@@ -69,18 +70,33 @@ button{
 
 body{
   font-family: "Golos Text", sans-serif;
-  background-image: url(img/1366_main.png);
-  background-repeat: no-repeat;
   color: var(--dark-gray);
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-400);
   line-height: var(--line-height-120);
 }
 
+.background-img-container{
+  width:1366px;
+  min-height: 100vh;
+  position: absolute;
+  top:0;
+  margin: 0;
+  background-image: url(img/1366_main.png);
+  background-repeat: no-repeat;
+  background-size: 1366px;
+  z-index: -1;
+}
+
+.background-img{
+  /* width: 100%; */
+  /* object-fit: contain; */
+}
+
 header{
   display: flex;
   justify-content: flex-start;
-  height: var(--header-height);
+  height: var(--header-height-des);
   align-content: flex-end;
   padding-top: 28px;
   padding-left: var(--margin-72);
@@ -93,6 +109,7 @@ header img{
 
 .main{
   min-height: calc(100vh - var(--header-height));
+  max-width: 1366px;
 }
 
 section{
@@ -137,9 +154,10 @@ section{
 }
 
 .first__section-container{
-  /* width: 50%;
+  max-width: 50%;
   display: flex;
-  align-items: flex-start; */
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .first__section-content{
@@ -152,6 +170,8 @@ section{
 
 
 .first__section-text{
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-130);
   text-align: center;
 }
 
@@ -167,7 +187,6 @@ section{
 
 
 .second__section-first-part{
-  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -176,8 +195,8 @@ section{
   /* margin-bottom: 40px; */
 }
 
-.second__section img{
-  height: 250px;
+.second__section-first-part > img{
+  max-width: 394px;
 }
 
 .second__section-second-part{
@@ -193,9 +212,9 @@ section{
   height: 528px;
 }
 
-.second__section-second-part-section-img{
+.second__section-second-part-img-container img{
+  width: 100%;
   border: 3px solid red;
-  mask-image: url(/img/chess_player.png);
 }
 
 table{
@@ -204,8 +223,7 @@ table{
 }
 
 tr {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-20);
   border-bottom: 2px solid var(--light-gray);
 }
 
@@ -228,12 +246,11 @@ td:nth-child(1) {
 }
 
 td:nth-child(2) {
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .caption{
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-20);
   color: var(--blue);
 }
 
@@ -251,9 +268,7 @@ s{
   position: relative;
   top: -118px;
   left: 310px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: var(--font-size-20);
   color: var(--blue);
 }
 
@@ -268,10 +283,8 @@ s{
   display: flex;
   padding: 20px;
   gap: 15px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 500;
-
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-500);
 }
 
 .grid-cell-1,
@@ -308,8 +321,8 @@ s{
   height: 20px;
   border-radius: 10px;
   background-color: var(--white);
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-600);
 }
 
 .airplane-container{
@@ -352,14 +365,13 @@ s{
 }
 
 .card-name{
-  font-size: 24px;
-  font-weight: 600;
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-600);
   margin-bottom: 10px;
 }
 
 .card-status{
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-20);
   margin-bottom: 20px;
 }
 
@@ -368,8 +380,8 @@ s{
   height: 35px;
   border: 1px solid var(--blue);
   border-radius: 62px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-500);
   color: var(--blue);
 }
 
@@ -385,8 +397,7 @@ s{
   background-color: var(--red);
   color: var(--white);
   font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-size: 20px;
+  font-size: var(--font-size-22);
   text-transform: uppercase;
 }
 
@@ -414,8 +425,8 @@ footer{
 .btn{
   width: 263px;
   height: 72px;
-  border-radius: 66px;
   padding: 20px;
+  border-radius: 66px;
 }
 
 .btn-black{
@@ -440,11 +451,92 @@ footer{
   color: var(--white);
 }
 
+@media (max-width: 1980px)  {
+  .background-img-container{
+    background-image: url(img/1980_main.png);
+  }
+}
+
+@media (max-width: 1366px)  {
+  .background-img-container{
+    background-image: url(img/1366_main.png);
+  }
+}
+
 @media (max-width: 480px) {
 
-  main{
-    margin: 0 20px;
+  section{
+    margin-left: var(--margin-20);
+    margin-right: var(--margin-20);
   }
 
+  header{
+    height: var(--header-height-mob);
+    padding-left: var(--margin-20);
+    margin-bottom: 40px;
+  }
+  
+  header img{
+    height: 32px;
+  }
 
+  .first__section-text{
+    text-align: left;
+  }
+
+  .first__section-content{
+    gap: 30px;
+  }
+
+  .second__section-first-part,
+  .second__section-second-part,
+  .btn-container{
+    flex-direction: column;
+  }
+
+  .main-title, .section-title-big{
+    font-size: var(--font-size-36);
+  }
+  
+  .section-title-big{
+    line-height: var(--line-height-110);
+  }
+  
+  .section-title-small{
+    font-size: var(--font-size-28);
+  }
+
+  .running-line{
+    font-size: var(--font-size-16);
+  }
+
+  .second__section-second-part-img-container{
+    width: 335px;
+  }
+
+  .third__section-subtitle, .caption, .grid-cell{
+    font-size: var(--font-size-18);
+  }
+
+  .second__section-first-part > img{
+    width: 335px;
+  }
+
+  .btn{
+    width: 335px;
+    height: 47px;
+    padding: 0;
+  }
+
+  .card-img{
+    width: 244px;
+    height: 244px;
+  }
+
+}
+
+@media (max-width: 375px)  {
+  .background-img-container{
+    background-image: url(img/375_main.png);
+  }
 }
