@@ -1,12 +1,18 @@
 /* 3 - section */
 .third__section{
   position: relative;
+  margin-bottom: 200px;
 }
 
+.third__section-title-container 
+.section-title-big
+{ 
+  margin-bottom: 5px;
+}
 .third__section-subtitle{
   position: relative;
-  top: -118px;
-  left: 310px;
+  top: -65px;
+  left: 300px;
   font-size: var(--font-size-20-18);
   color: var(--blue);
 }
@@ -22,8 +28,8 @@
 .grid-cell{
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 20px 10px 20px 20px;
-  gap: 13px;
+  padding: 20px 5px 20px 20px;
+  gap: 15px;
   font-size: var(--font-size-20-18);
   font-weight: var(--font-weight-500);
 }
@@ -49,7 +55,7 @@
 
 .grid-cell-7{
   position: relative;
-  padding-right: 35%;
+  padding-right: 37%;
   grid-column-start: 2;
   grid-column-end: 4;
   background-image: url(/img/bg_803_136.png);
@@ -69,8 +75,8 @@
 
 .airplane-container{
   position: absolute;
-  top:-57%;
-  right: -6%;
+  top:-58%;
+  right: -5%;
   width: 335px;
 
 }

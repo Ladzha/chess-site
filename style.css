@@ -85,7 +85,6 @@ body{
 }
 
 .background-img{
-
   min-width: 100vw;
   min-height: 100vh;
   position: absolute;
@@ -142,6 +141,53 @@ section{
   font-weight: var(--font-weight-700);
 }
 
+.line{
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  background-color: var(--blue);
+  color: var(--white);
+  transform: translate(-50%, -50%);
+}
+
+.line-wrapper{
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100;
+  /* animation: redline 5s linear infinite; */
+}
+
+.line-text{
+  font-family: "Merriweather", serif;
+  font-size: var(--font-size-22-16);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 15px;
+}
+
+.circle{
+  width: 6px;
+  height: 6px;
+  background-color: var(--white);
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: redline 5s linear infinite;
+
+}
+
+@keyframes redline{
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 .running-line{
   position: relative;
