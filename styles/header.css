@@ -1,0 +1,32 @@
+:root{
+  --header-height-des: 60px; 
+  --header-height-mob: 47px; 
+}
+
+header{
+  display: flex;
+  justify-content: flex-start;
+  height: var(--header-height-des);
+  align-content: flex-end;
+  padding-top: 26px;
+  padding-left: var(--margin-72);
+  margin-bottom: 65px;
+}
+
+header img{
+  height: 36px;
+}
+
+@media (max-width: 480px) {
+
+  header{
+    height: var(--header-height-mob);
+    padding-left: var(--margin-20);
+    margin-bottom: 40px;
+  }
+  
+  header img{
+    height: 32px;
+  }
+
+}

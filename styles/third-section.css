@@ -1,0 +1,82 @@
+/* 3 - section */
+.third__section{
+  position: relative;
+}
+
+.third__section-subtitle{
+  position: relative;
+  top: -118px;
+  left: 310px;
+  font-size: var(--font-size-20-18);
+  color: var(--blue);
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  /* grid-template-rows: 112px 112px 136px; */
+  grid-template-rows: 1fr 1fr auto;
+  gap: 20px;
+}
+
+.grid-cell{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 20px 10px 20px 20px;
+  gap: 13px;
+  font-size: var(--font-size-20-18);
+  font-weight: var(--font-weight-500);
+}
+
+.grid-cell-1,
+.grid-cell-2,
+.grid-cell-4,
+.grid-cell-5{
+  background-image: url(/img/bg_394_112.png);
+}
+
+.grid-cell-3{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  background-image: url(/img/bg_394_244.png);
+}
+
+.grid-cell-6{
+  background-image: url(/img/bg_394_136.png);
+}
+
+.grid-cell-7{
+  position: relative;
+  padding-right: 35%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-image: url(/img/bg_803_136.png);
+}
+
+.circle-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  clip-path: circle();
+  background-color: var(--white);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-600);
+}
+
+.airplane-container{
+  position: absolute;
+  top:-57%;
+  right: -6%;
+  width: 335px;
+
+}
+.airplane-big{
+  width: 100%;
+  height: 100%;
+  mask-image: url(/img/mask-airplane-big.svg);
+  mask-size: 101%;
+}
