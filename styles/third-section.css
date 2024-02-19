@@ -5,17 +5,23 @@
 }
 
 .third__section-title-container 
-.section-title-big
-{ 
+.section-title-big{ 
   margin-bottom: 5px;
-}
+} 
+
+
 .third__section-subtitle{
   position: relative;
-  top: -65px;
+  top: -60px;
   left: 300px;
   font-size: var(--font-size-20-18);
   color: var(--blue);
 }
+
+.third__section-subtitle > span{
+  display: block;
+}
+
 
 .grid-container{
   display: grid;
@@ -27,37 +33,33 @@
 
 .grid-cell{
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 11fr;
   padding: 20px 5px 20px 20px;
   gap: 15px;
   font-size: var(--font-size-20-18);
   font-weight: var(--font-weight-500);
 }
 
-.grid-cell-1,
-.grid-cell-2,
-.grid-cell-4,
-.grid-cell-5{
+.grid-cell:nth-child(1),
+.grid-cell:nth-child(2),
+.grid-cell:nth-child(4),
+.grid-cell:nth-child(5){
   background-image: url(/img/bg_394_112.png);
 }
 
-.grid-cell-3{
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 3;
+.grid-cell:nth-child(3){
+  grid-row: span 2;
   background-image: url(/img/bg_394_244.png);
 }
 
-.grid-cell-6{
+.grid-cell:nth-child(6){
   background-image: url(/img/bg_394_136.png);
 }
 
-.grid-cell-7{
+.grid-cell:nth-child(7){
   position: relative;
-  padding-right: 37%;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  padding-right: 40%;
+  grid-column: span 2;
   background-image: url(/img/bg_803_136.png);
 }
 
@@ -85,4 +87,92 @@
   height: 100%;
   mask-image: url(/img/mask-airplane-big.svg);
   mask-size: 101%;
+}
+
+@media (max-width: 992px) {
+
+  .third__section{ 
+    margin-bottom: 120px;
+  }
+
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(auto, 350px);
+  }
+  .grid-cell{
+    background-image: none;
+    background-image: url(/img/bg_mb_335_300.png);
+  }
+  .grid-cell:nth-child(3){
+    grid-row: span 1;
+  }
+
+  .grid-cell{
+    padding-right: 20px;
+  }
+
+  .airplane-container{
+    top:-40%;
+    right: -5%;
+    width: 335px; 
+  }
+}
+
+@media (max-width: 650px) {
+  .third__section-subtitle{
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .third__section-subtitle > span{
+    display: inline;
+  }
+
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-cell:nth-child(7){
+    padding-right:75px;
+  }
+  .airplane-container{
+    top:60%;
+    right: -5%;
+    width: 335px; 
+  }
+
+}
+
+@media (max-width: 530px) {
+
+  .third__section-title-container 
+  .section-title-big{ 
+  font-size: 47px;
+  margin-bottom: 10px;
+}
+
+  .section-title-big{ 
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .grid-container{
+    grid-template-columns: repeat(5, 300px); 
+    grid-template-rows: 335px;
+  }
+
+    .third__section-title-container 
+    .section-title-big{ 
+    font-size: 40px;
+  }
+}
+@media (max-width: 375px) {
+
+    .third__section-title-container 
+    .section-title-big{ 
+    font-size: 36px;
+  }
+
 }

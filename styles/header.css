@@ -1,14 +1,13 @@
 :root{
   --header-height-des: 60px; 
-  --header-height-mob: 47px; 
 }
 
 header{
   display: flex;
   justify-content: flex-start;
   height: var(--header-height-des);
-  align-content: flex-end;
-  padding-top: 26px;
+  align-content: center;
+  padding-top: 17px;
   padding-left: var(--margin-72);
   margin-bottom: 65px;
 }
@@ -22,7 +21,7 @@ header img{
   header{
     height: var(--header-height-mob);
     padding-left: var(--margin-20);
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
   
   header img{

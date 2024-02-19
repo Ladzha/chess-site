@@ -1,9 +1,9 @@
 /* 4 - section */
 .fourth__section{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto;
-  margin-bottom: 200px;
+  margin-bottom: 140px;
 }
 
 .fourth__section .section-title-big{
@@ -33,15 +33,21 @@
   transform: scale(-1, 1) 
 }
 
-/* cards */
 .cards-container{
   padding-top: 60px;
+  min-width: 100%;
   grid-column: span 2;
+  overflow: hidden;
+}
+
+/* cards */
+.cards{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
+  align-items: flex-start;
   min-width: 100%;
+  /* gap: 40px; */
+  transition: all 1s;
 }
 
 .card{
@@ -50,8 +56,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-width: 335px;
-  margin: 0 37px;
+  border: 2px solid black;
+  min-width: 375px;
+  padding: 0 40px;
 }
 
 .card-img{
@@ -82,3 +89,26 @@
   font-weight: var(--font-weight-500);
   color: var(--blue);
 }
+
+
+@media (max-width: 550px) {
+
+  .fourth__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 140px; */
+  }
+
+  .carousel-controller{
+    order: 3;
+  }
+
+  .card{
+    min-width: 335px;
+  }
+
+
+}
+
