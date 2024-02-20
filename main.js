@@ -1,5 +1,7 @@
 const slider = document.querySelector('.cards');
 const cards = document.querySelectorAll('.card')
+const cardWidth = document.querySelector('.card').offsetWidth;
+const currentCardNumber = document.querySelector('.current-card-index')
 
 const btnPrev = document.querySelector('.carousel-btn-left');
 const btnNext = document.querySelector('.carousel-btn-right');
@@ -8,7 +10,6 @@ btnPrev.addEventListener('click', swipePrev)
 btnNext.addEventListener('click', swipeNext)
 
 let currentIndex=0;
-const cardWidth = cards[0].offsetWidth;
 
 function swipeSlider(index){
   slider.style.transform = `translateX(${-cardWidth * index}px)`
@@ -20,6 +21,8 @@ function swipePrev(){
   }else{
     currentIndex--;
   }
+  currentCardNumber.textContent = currentIndex;
+  // slider.scrollLeft +=cardWidth
   swipeSlider(currentIndex)
 }
 
@@ -30,7 +33,10 @@ function swipeNext(){
   else{
     currentIndex++;
   }
+  currentCardNumber.textContent = currentIndex;
+
+  // slider.scrollLeft -=cardWidth;
   swipeSlider(currentIndex);
 }
 
-setInterval(()=>swipeSlider(currentIndex), 1000)
+// setInterval(()=>swipeSlider(currentIndex), 1000)

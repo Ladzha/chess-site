@@ -29,6 +29,9 @@
   background-color: var(--dark-gray);
 }
 
+.last-card-index{
+  opacity: 60%;
+}
 .carousel-btn-left img{
   transform: scale(-1, 1) 
 }
@@ -44,10 +47,11 @@
 .cards{
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   min-width: 100%;
-  /* gap: 40px; */
-  transition: all 1s;
+  gap: 40px;
+  transition: all 2s;
+  scroll-behavior: smooth;
 }
 
 .card{
@@ -64,7 +68,7 @@
 .card-img{
   width: clamp(244px, calc(13.45rem + 7.67vw), 320px);
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .card-name{
@@ -109,6 +113,8 @@
     min-width: 335px;
   }
 
+}
+@media (max-width: 376px) {
+
 
 }
-

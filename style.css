@@ -109,7 +109,6 @@ section{
 
 .section-title-small{
   font-size: var(--small-title);
-  line-height: 140%;
 }
 
 .title-red{

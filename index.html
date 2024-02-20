@@ -16,14 +16,13 @@
 
 </head>
 <body>
+  
   <header>
     <img src="img/logo.svg" alt="logo" title="logo">
   </header>
+
   <main class="main">
-    <div class="background-img">
-      <!-- <img src="/img/1366_main.png" alt="" class="background-img"> -->
-    </div>
-    
+  
     <section class="first__section">
       <div class="first__section-container">
         <div class="first__section-content">
@@ -54,11 +53,12 @@
    <span class="running-line-text">Дело помощи утопающим — дело рук самих утопающих!</span>
    <span class="running-line-text">Шахматы двигают вперед не только культуру, но и экономику!</span>
 
-  <span class="white-circle"></span>Лед тронулся, господа присяжные заседатели!<span class="white-circle"></span></marquee> -->
+  <span class="white-circle"></span>Лед тронулся, господа присяжные заседатели!<span class="white-circle"></span></marquee>  -->
 
   <section class="second__section">
     <article class="second__section-first-part">
-      <h3 class="section-title section-title-small">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span class="title-red">«Плодотворная дебютная идея»</span></h3>
+      <h3 class="section-title section-title-small">
+        <span>Чтобы поддержать Международный васюкинский турнир</span> <span></span> <span> посетите лекцию на тему: </span> <span class="title-red">«Плодотворная дебютная идея»</span></h3>
       <div class="img-container">
         <img src="/img/people_plays_chess.png" alt="люди играют в шахматы"
         loading="lazy">
@@ -96,31 +96,31 @@
         <span>обогащения васюкинцев</span>
       </div>
       <div class="grid-container">
-        <div class="grid-cell grid-cell-1">
+        <div class="grid-cell">
           <div class="circle-number">1</div>
           <div class="grid-cell-text">Строительство железнодорожной магистрали Москва-Васюки</div>
         </div>
-        <div class="grid-cell grid-cell-2">
+        <div class="grid-cell">
           <div class="circle-number">2</div>
           <div>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
         </div>
-        <div class="grid-cell grid-cell-3">
+        <div class="grid-cell">
           <div class="circle-number">3</div>
           <div>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
         </div>
-        <div class="grid-cell grid-cell-4">
+        <div class="grid-cell">
           <div class="circle-number">4</div>
           <div>Строительство дворца для турнира</div>
         </div>
-        <div class="grid-cell grid-cell-5">
+        <div class="grid-cell">
           <div class="circle-number">5</div>
           <div>Размещение гаражей для гостевого автотранспорта</div>
         </div>
-        <div class="grid-cell grid-cell-6">
+        <div class="grid-cell">
           <div class="circle-number">6</div>
           <div>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
         </div>
-        <div class="grid-cell grid-cell-7">
+        <div class="grid-cell">
           <div class="circle-number">7</div>
           <div>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
         
@@ -131,15 +131,25 @@
         </div>
       </div>
 
+      <div class="grid-slider-controller">
+        <button class="grid-slider-btn-left"><img src="/img/arrow.svg" alt=""></button>
+          <span class="grid-slider-current-circle"></span>
+          <span class="grid-slider-current-circle"></span>
+          <span class="grid-slider-current-circle"></span>
+          <span class="grid-slider-current-circle"></span>
+          <span class="grid-slider-current-circle active"></span>
+        <button class="grid-slider-btn-right active"><img src="/img/arrow.svg"></button>
+      </div>
+
     </section>
     <section class="fourth__section">
 
       <h2 class="section-title section-title-big">Участники турнира</h2>
 
       <div class="carousel-controller">
-        <button class="carousel-btn-left" onclick="swipeNext"><img src="/img/arrow.svg" alt=""></button>
-        <div class=""><span class="carousel-number-left">1</span>/<span>6</span></div>
-        <button class="carousel-btn-right"><img src="/img/arrow.svg" width="-100%"></button>
+        <button class="carousel-btn-left"><img src="/img/arrow.svg" alt=""></button>
+        <div class=""><span class="current-card-index">1</span><span class="last-card-index">/6</span></div>
+        <button class="carousel-btn-right"><img src="/img/arrow.svg"></button>
       </div>
 
       <div class="cards-container">
