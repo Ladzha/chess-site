@@ -16,6 +16,7 @@
 
 </head>
 <body>
+  <!-- <div class="bg"></div> -->
   
   <header>
     <img src="img/logo.svg" alt="logo" title="logo">
@@ -30,33 +31,35 @@
           <p style="text-align: center;">в столицу<br/>&nbsp;&nbsp;земного шара</p></h1>
           <p class="first__section-text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
           <div class="btn-container">
-            <button class="btn btn-black">Поддержать шахматную мысль</button>
-            <button class="btn btn-line">Подробнее о турнире</button>
+            <a href="#support" class="btn btn-black">Поддержать шахматную мысль</a>
+            <a href="#details" class="btn btn-line">Подробнее о турнире</a>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="line">
+    <!-- <div class="line">
       <div class="line-wrapper">
         <span class="line-text">Дело &nbsp; помощи &nbsp; утопающим &nbsp;— &nbsp; дело &nbsp; рук &nbsp; самих &nbsp; утопающих! &nbsp;</span>
-        <!-- <div class="line-text"><div class="circle">.</div></div> -->
-        <!-- <span class="line-text">Шахматы &nbsp; двигают &nbsp; вперед &nbsp; не &nbsp; только &nbsp;культуру, &nbsp; но &nbsp; и &nbsp; экономику! &nbsp;</span>
-        <span class="line-text">Лед &nbsp; тронулся, &nbsp; господа &nbsp; присяжные &nbsp;заседатели!&nbsp;</span> -->
+        <div class="line-text"><div class="circle">.</div></div>
+        <span class="line-text">Шахматы &nbsp; двигают &nbsp; вперед &nbsp; не &nbsp; только &nbsp;культуру, &nbsp; но &nbsp; и &nbsp; экономику! &nbsp;</span>
+        <span class="line-text">Лед &nbsp; тронулся, &nbsp; господа &nbsp; присяжные &nbsp;заседатели!&nbsp;</span>
       </div>
       <div class="line-wrapper">
         <span class="line-text">Дело &nbsp; помощи &nbsp; утопающим &nbsp;— &nbsp; дело &nbsp; рук &nbsp; самих &nbsp; утопающих! &nbsp;</span>
       </div>
-    </div>
-
-  <!-- <marquee class="running-line" behavior="scroll" scrollamount="10">
+    </div> -->
+<!-- 
+  <marquee class="running-line" behavior="scroll" scrollamount="10">
    <span class="running-line-text">Дело помощи утопающим — дело рук самих утопающих!</span>
    <span class="running-line-text">Шахматы двигают вперед не только культуру, но и экономику!</span>
 
-  <span class="white-circle"></span>Лед тронулся, господа присяжные заседатели!<span class="white-circle"></span></marquee>  -->
+  <span class="white-circle"></span>Лед тронулся, господа присяжные заседатели!<span class="white-circle"></span></marquee> -->
+
+  <marquee class="top-line" behavior="scroll" scrollamount="10">Дело помощи утопающим — дело рук самих утопающих!<span class="white-dot"></span>Шахматы двигают вперед не только культуру, но и экономику!<span class="white-dot"></span>Лед тронулся, господа присяжные заседатели!<span class="white-dot"></span></marquee>
 
   <section class="second__section">
-    <article class="second__section-first-part">
+    <article id="support" class="second__section-first-part">
       <h3 class="section-title section-title-small">
         <span>Чтобы поддержать Международный васюкинский турнир</span> <span></span> <span> посетите лекцию на тему: </span> <span class="title-red">«Плодотворная дебютная идея»</span></h3>
       <div class="img-container">
@@ -64,7 +67,7 @@
         loading="lazy">
       </div>
     </article>
-    <article class="second__section-second-part">
+    <article id="details" class="second__section-second-part">
 
       <img src="/img/chess_player_noise.png" alt="игрок в шахматы">
 
@@ -94,9 +97,12 @@
         <p class="third__section-subtitle">
         <span>Будущие источники&nbsp;</span>
         <span>обогащения васюкинцев</span>
+        </p>
       </div>
+
+      <div class="slider-wrapper">
       <div class="grid-container">
-        <div class="grid-cell">
+        <div class="grid-cell active-slide">
           <div class="circle-number">1</div>
           <div class="grid-cell-text">Строительство железнодорожной магистрали Москва-Васюки</div>
         </div>
@@ -122,22 +128,23 @@
         </div>
         <div class="grid-cell">
           <div class="circle-number">7</div>
-          <div>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
-        
-          <div class="airplane-container">
-            <img src="/img/airplane-big.png" alt="Самолет" class="airplane-big"/>
-          </div>
-          
+          <div>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>  
+        </div>
+
+        <div class="airplane-container">
+          <img src="/img/airplane-big.png" alt="Самолет" class="airplane-big"/>
         </div>
       </div>
+      
+    </div>
 
       <div class="grid-slider-controller">
         <button class="grid-slider-btn-left"><img src="/img/arrow.svg" alt=""></button>
-          <span class="grid-slider-current-circle"></span>
-          <span class="grid-slider-current-circle"></span>
-          <span class="grid-slider-current-circle"></span>
-          <span class="grid-slider-current-circle"></span>
-          <span class="grid-slider-current-circle active"></span>
+          <span class="grid-slider-current-dot active"></span>
+          <span class="grid-slider-current-dot"></span>
+          <span class="grid-slider-current-dot"></span>
+          <span class="grid-slider-current-dot"></span>
+          <span class="grid-slider-current-dot"></span>
         <button class="grid-slider-btn-right active"><img src="/img/arrow.svg"></button>
       </div>
 
@@ -198,7 +205,9 @@
 
       </div>
     </section>
-    <marquee class="line-footer" behavior="scroll" scrollamount="10">Дело помощи утопающим — дело рук самих утопающих!<span class="white-circle"></span>Шахматы двигают вперед не только культуру, но и экономику!<span class="white-circle"></span>Лед тронулся, господа присяжные заседатели!<span class="white-circle"></span></marquee>
+
+    <marquee class="line-footer" behavior="scroll" scrollamount="10">Дело помощи утопающим — дело рук самих утопающих!<span class="white-dot"></span>Шахматы двигают вперед не только культуру, но и экономику!<span class="white-dot"></span>Лед тронулся, господа присяжные заседатели!<span class="white-dot"></span></marquee>
+
   </main>
 
   <footer>

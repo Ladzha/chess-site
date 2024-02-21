@@ -25,8 +25,13 @@
   align-items: center;
   width: 44px;
   height: 44px;
-  clip-path: circle();
+  border-radius: 50%;
   background-color: var(--dark-gray);
+  transition: all 0.2s;
+}
+
+.carousel-btn-left:hover, .carousel-btn-right:hover{
+  background-color: var(--yellow);
 }
 
 .last-card-index{
@@ -49,7 +54,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 100%;
-  gap: 40px;
   transition: all 2s;
   scroll-behavior: smooth;
 }
@@ -61,7 +65,7 @@
   align-items: center;
   text-align: center;
   border: 2px solid black;
-  min-width: 375px;
+  width: 400px;
   padding: 0 40px;
 }
 
@@ -92,18 +96,29 @@
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-500);
   color: var(--blue);
+  transition: all 0.2s;
 }
 
+.card-btn:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
 
-@media (max-width: 550px) {
+.carousel-btn-left, .carousel-btn-right{
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 620px) {
 
   .fourth__section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 140px; */
   }
+}
+  @media (max-width: 480px) {
 
   .carousel-controller{
     order: 3;
@@ -114,7 +129,35 @@
   }
 
 }
+
 @media (max-width: 376px) {
 
+  .fourth__section { 
+    margin-bottom: 100px;
+  }
+
+  .fourth__section 
+  .section-title-big{ 
+   font-size: 36px;
+   margin-bottom: -20px;
+  }
+
+  .cards-container{
+    width: 335px;
+    margin-bottom: 38px;
+  }
+
+  .card{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .card-img{
+    margin-bottom: 30px;
+  }
+
+  .carousel-controller{
+    gap:15px;
+  }
 
 }
