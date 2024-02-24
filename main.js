@@ -57,18 +57,65 @@ function sliderNext(){
 }
 
 /*Cards slider*/
-const cardsLine = document.querySelector('.cards');
-const cards = document.querySelectorAll('.card')
-const cardWidth = document.querySelector('.card').offsetWidth;
-const currentCardNumber = document.querySelector('.current-card-index')
+const cards_container = document.querySelector('.cards-container');
+const cards_line = document.querySelector('.cards');
+const cards = document.querySelectorAll('.card');
+
+const cardWidth = document.querySelector('.card').clientWidth;
+const currentCardNumber = document.querySelector('.current-card-index');
 
 const btnPrev = document.querySelector('.carousel-btn-left');
 const btnNext = document.querySelector('.carousel-btn-right');
 
-btnPrev.addEventListener('click', swipePrev)
-btnNext.addEventListener('click', swipeNext)
+let cardIndex=1;
 
-let cardIndex=0;
+let current =1;
+
+cards_line.style.transform = `translateX(${-cardWidth}px)`;
+
+btnNext.addEventListener('click', ()=>{
+  if(current <=0) return;
+  cards_line.style.transition = '200ms ease-in-out transform';
+  current --;
+  cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
+
+  if(cardIndex > 6){
+    currentIndex = 1;
+  }else{
+    cardIndex++;
+  }
+  currentCardNumber.textContent = cardIndex;
+
+})
+
+btnPrev.addEventListener('click', ()=>{
+  if(current >= cards.length -3) return;
+  cards_line.style.transition = '200ms ease-in-out transform';
+  current ++;
+  cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
+
+  if(cardIndex < 1){
+    currentIndex = 6;
+  }else{
+    cardIndex--;
+  }
+  currentCardNumber.textContent = cardIndex;
+})
+
+cards_line.addEventListener('transitionend', ()=>{
+  if(cards[current].classList.contains('first-card')){
+    cards_line.style.transition = 'none';
+    current = cards.length -3;
+    cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
+  }
+  if(cards[current+2].classList.contains('last-card')){
+    cards_line.style.transition = 'none';
+    current = cards.length - current;
+    cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
+  }
+})
+
+
 
 function swipeSlider(index){
   cardsLine.style.transform = `translateX(${-cardWidth * index}px)`

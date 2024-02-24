@@ -1,5 +1,5 @@
 footer{
-  min-width: 100vw;
+  max-width: 1366px;
   padding: 40px 72px 72px 72px;
   background-color: var(--beige);
   bottom: 0;

@@ -3,6 +3,7 @@
 }
 
 header{
+  max-width: 1366px;
   display: flex;
   justify-content: flex-start;
   height: var(--header-height-des);
