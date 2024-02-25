@@ -73,34 +73,37 @@ let current =1;
 
 cards_line.style.transform = `translateX(${-cardWidth}px)`;
 
-btnNext.addEventListener('click', ()=>{
+function next(){
   if(current <=0) return;
-  cards_line.style.transition = '200ms ease-in-out transform';
+  cards_line.style.transition = '2000ms ease-in-out transform';
   current --;
   cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
 
-  if(cardIndex > 6){
-    currentIndex = 1;
+  if(cardIndex >= 6){
+    cardIndex = 1;
   }else{
     cardIndex++;
   }
   currentCardNumber.textContent = cardIndex;
+}
 
-})
-
-btnPrev.addEventListener('click', ()=>{
+function prev(){
   if(current >= cards.length -3) return;
-  cards_line.style.transition = '200ms ease-in-out transform';
+  cards_line.style.transition = '2000ms ease-in-out transform';
   current ++;
   cards_line.style.transform = `translateX(${-cardWidth * current}px)`;
 
-  if(cardIndex < 1){
-    currentIndex = 6;
+  if(cardIndex <= 1){
+    cardIndex = 6;
   }else{
     cardIndex--;
   }
   currentCardNumber.textContent = cardIndex;
-})
+}
+
+btnNext.addEventListener('click', next)
+btnPrev.addEventListener('click', prev)
+
 
 cards_line.addEventListener('transitionend', ()=>{
   if(cards[current].classList.contains('first-card')){
@@ -116,31 +119,4 @@ cards_line.addEventListener('transitionend', ()=>{
 })
 
 
-
-function swipeSlider(index){
-  cardsLine.style.transform = `translateX(${-cardWidth * index}px)`
-}
-
-function swipePrev(){
-  if(cardIndex <= 0){
-    currentIndex = cards.length-1;
-  }else{
-    cardIndex--;
-    currentCardNumber.textContent = cardIndex-1;
-  }
-  swipeSlider(cardIndex)
-}
-
-function swipeNext(){
-  if(cardIndex >= cards.length-1){
-    cardIndex = 0
-  }
-  else{
-    cardIndex++;
-    currentCardNumber.textContent = cardIndex+1;
-  }
-
-  swipeSlider(cardIndex);
-}
-
-// setInterval(()=>swipeSlider(cardIndex), 1000)
+setInterval(next, 4000)

@@ -129,15 +129,6 @@ section{
   font-weight: var(--font-weight-700);
 }
 
-@keyframes redline{
-  from{
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
 .top-line,
 .line-footer{
   width: 100%;
@@ -149,7 +140,7 @@ section{
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 50px;
+  gap: 15px;
   background-color: var(--red);
   color: var(--white);
   font-family: "Merriweather", serif;
@@ -159,22 +150,11 @@ section{
 
 .top-line span,
 .line-footer span{
-  background-color: greenyellow;
   display:inline-flex;
   align-items:center;
   white-space: nowrap;
 }
 
-
-.top-line span::after{
-  display:inline-flex;
-  align-items:center;
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  background-color: var(--white);
-  
-}
 
 .top-line{
   top: -180px;
